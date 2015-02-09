@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Gorka Lerchundi Osa <glertxundi@gmail.com>
+MAINTAINER Frank Lemanschik <DIREKTSPEED LTD>
 
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,7 +10,7 @@ RUN apt-get update && \
 RUN mkdir -p /build && \
     mkdir -p /dist
 
-COPY rootfs /
+COPY build.sh /
 RUN chmod +x /build.sh
 
 VOLUME "/dist"
