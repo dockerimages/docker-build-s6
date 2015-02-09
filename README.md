@@ -1,5 +1,4 @@
 ```
-docker build .                            | \
-tail -n 1 | awk '{ print $3; }'           | \
-xargs docker run --rm -v `pwd`/dist:/dist
+docker build -t dockerimages/docker-build-s6 https://github.com/dockerimages/docker-build-s6
+docker run --rm -v `pwd`/dist:/dist dockerimages/docker-build-s6
 ```
