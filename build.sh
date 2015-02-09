@@ -32,6 +32,7 @@ make
 make install
 
 # install musl
+RUN mkdir -p /build
 cd /build
 curl -R -L -O http://www.musl-libc.org/releases/musl-${musl_version}.tar.gz
 tar xf musl-${musl_version}.tar.gz
