@@ -6,7 +6,7 @@ set -x
 make_version=4.1
 
 # skarnet versions
-musl_version=1.0.4
+musl_version=1.0.5
 skalibs_version=2.2.1.0
 execline_version=2.0.2.0
 s6_version=2.1.0.1
@@ -32,7 +32,7 @@ make
 make install
 
 # install musl
-RUN mkdir -p /build
+mkdir -p /build
 cd /build
 curl -R -L -O http://www.musl-libc.org/releases/musl-${musl_version}.tar.gz
 tar xf musl-${musl_version}.tar.gz
